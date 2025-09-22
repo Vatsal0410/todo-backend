@@ -4,7 +4,7 @@ import path from "path";
 import { Todo } from "../models/Todo";
 
 const router = Router();
-const filePath = path.join(__dirname, "../data/todos.json");
+const filePath = path.join(process.cwd(), "src/data/todos.json");
 
 const readTodos = (): Todo[] => {
   const data = fs.readFileSync(filePath, "utf-8");
